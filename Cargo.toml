@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "104-projects/minigrep",
+]
+resolver = "2"
