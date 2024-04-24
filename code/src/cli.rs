@@ -11,12 +11,6 @@ pub fn main() -> clap::ArgMatches{
                 .arg(arg!(-e --example "example of chapter 16").required(false))
                 .arg(arg!([e] "example to run").required(true))
         )
-        // .subcommand(
-        //     Command::new("math")
-        //         .about("Mathmatical functions")
-        //         .arg(arg!(-e --example "example of chapter 16").required(false))
-        //         .arg(arg!([e] "example to run").required(true))
-        // )
         .about("Specify the chapter and example to run")
         .get_matches()
 }

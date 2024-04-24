@@ -1,6 +1,6 @@
 # Smart Pointers
 
-A *pointer* is a general concept  for a variale that contains in memory. This address refers to, or "points at" some other data.
+A *pointer* is a general concept  for a variable that contains in memory. This address refers to, or "points at" some other data.
 
 The most common kind of poitner in Rust is a reference. References are indicated by the `&` symbol and borrow that value they point to. They don't have any special capabilities other than referring to data, and have no overhead.
 
