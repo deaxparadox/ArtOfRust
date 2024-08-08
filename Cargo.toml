@@ -1,6 +1,9 @@
 [workspace]
 members = [
-    "104-projects/minigrep",
-    "code",
+    "104-projects/minigrep", 
+    "byexamples",
+    "code", 
+    "learn", "projects", 
+    "references",
 ]
 resolver = "2"
