@@ -1,3 +1,5 @@
+pub mod smart_pointers;
+
 fn main() {
-    println!("Hello, world!");
+    smart_pointers::deref::box_ref();
 }
