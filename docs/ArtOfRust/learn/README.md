@@ -5,3 +5,4 @@
 - [Functinal Language Features](113-functional-language-features-iterators-and-closures/README.md)
 - [Cargo and Crates.io](114-cargoa-and-crates-io/README.md)
 - [Smart Pointers](115-smart-pointers/README.md)
+- [Fearless Concurrency](117-frealess-concurrency/README.md)

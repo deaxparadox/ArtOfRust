@@ -2,7 +2,5 @@
 members = [
     "projects/minigrep", 
     "code", 
-    "learn",  
-    "references",
 ]
 resolver = "2"

@@ -4,7 +4,7 @@ To create a new thread:
 
 - we call the `thread::spawn` function and pass it a closure containing the code we want to run in the new thread.
 
-- The example prints some text from a main thread and other text from the new thread:
+- The example in Listing 16.1 prints some text from a main thread and other text from the new thread:
 
 ```rust
 use std::thread;
@@ -25,8 +25,9 @@ fn main() {
 }
 ```
 
-- **Note that when the main thread of a Rust program completes, all spawned threads are shut down,
- whether or not they have finshed running.
+###### Listing 16-1: Creating a new thread to print one thing while the main thread prints something else
+
+- Note that when the main thread of a Rust program completes, all spawned threads are shut down, whether or not they have finshed running.
 
 ```bash
 hi number 1 from the main thread!
