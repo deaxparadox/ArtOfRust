@@ -24,6 +24,6 @@ fn main() {
         
     // }
 
-    c16::ex1_thread_usage::main()
+    c16::ex2_join_threads::main()
 
 }

@@ -46,4 +46,4 @@ hi number 4 from the spawned thread!
 - In this run, the main thread printed first, even though the print statement from the spawned thread appears first in the code.
 - And even though we told the spawned thread to print until `1` is 9, it only got to 5 before the main thread shut down.
 
-[<<< Using threads](101-using-threads.md)... [Waiting for all threads >>> ](101.2-waiting-for-all-threads.md)
+[<<< Using threads](101-using-threads.md)... [Waiting for all threads >>> ](103-waiting-for-all-threads.md)

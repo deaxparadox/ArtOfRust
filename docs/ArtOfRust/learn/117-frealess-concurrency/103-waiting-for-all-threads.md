@@ -30,7 +30,7 @@ fn main() {
 ```
 
 - Calling `join` on the handle blocks the thread currently running until the thread represent by the handle terminates.
-- *Blocking* a threads means that thread is prevented from preforming work or exiting. 
+- *Blocking* a threads means that thread is prevented from performing work or exiting. 
 - Because we've put the call to `join` after the main thread's `for` loop,
 
 ```rust
