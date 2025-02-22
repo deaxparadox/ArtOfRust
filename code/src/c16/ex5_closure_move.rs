@@ -1,13 +1,13 @@
-use std::thread;
+// use std::thread;
 
-fn main() {
-    let v = vec![1, 2, 3];
+// fn main() {
+//     let v = vec![1, 2, 3];
 
-    let handle = thread::spawn(|| {
-        println!("Here's a vector: {:?}", v);
-    });
+//     let handle = thread::spawn(|| {
+//         println!("Here's a vector: {:?}", v);
+//     });
 
-    drop(v); // oh no!
+//     drop(v); // oh no!
 
-    handle.join().unwrap();
-}
+//     handle.join().unwrap();
+// }
