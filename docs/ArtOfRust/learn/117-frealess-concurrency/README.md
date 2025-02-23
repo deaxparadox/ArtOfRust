@@ -10,3 +10,4 @@
 - [Waiting for all threads](103-waiting-for-all-threads.md)
 - [Using move closure](104-using-move-closures.md)
 - [Using message passing to Transfer data between threads](using-message-data-transfer-between-threads.md)
+- [Shared state conrrency](shared-state-concurrency.md)

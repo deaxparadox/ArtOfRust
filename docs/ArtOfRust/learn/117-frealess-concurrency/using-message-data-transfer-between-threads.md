@@ -150,3 +150,68 @@ fn main() {
 ```
 
 ###### Listing 16-10: Sending multiple messages and pausing between each
+
+
+### Creating Mulitple Producers by Cloning the Transmitter
+
+Let' create multiple threads that all send values to the same values. We can do so by cloning the transmitter:
+
+```rs
+use std::sync::mpsc;
+use std::thread;
+
+
+let (tx, rx) = mpsc::channel();
+
+
+let tx1 = tx.clone();
+thread::spawn(move || {
+    let vals = vec![
+        String::from("hi"),
+        String::from("from"),
+        String::from("the"),
+        String::from("thread"),
+    ];
+
+    for val in vals {
+        tx1.send(val).unwrap();
+        thread::sleep(time::Duration::from_millis(500));
+    }
+});
+
+// let tx2 = tx.close();
+thread::spawn(move || {
+    let vals = vec![
+        String::from("more"),
+        String::from("messages"),
+        String::from("for"),
+        String::from("you"),
+    ];
+
+    for val in vals {
+        tx.send(val).unwrap();
+        thread::sleep(time::Duration::from_secs(1));
+    }
+});
+
+for mes in rx {
+    println!("Recevied: {mes}");
+}
+
+
+```
+
+###### Listing 16-11: Sending multiple messages from multiple producers
+
+The output might differ:
+
+```bash
+Recevied: hi
+Recevied: more
+Recevied: from
+Recevied: messages
+Recevied: the
+Recevied: thread
+Recevied: for
+Recevied: you
+```

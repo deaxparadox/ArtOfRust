@@ -10,6 +10,6 @@ use std::path::PathBuf;
 
 fn main() {
 
-    c16::myex10::first();
+    c16::ex12::first();
 
 }
