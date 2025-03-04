@@ -191,4 +191,5 @@ error: could not compile `shared-state` (bin "shared-state") due to 1 previous e
 
 Here’s the important part to focus on: ``Rc<Mutex<i32>>` cannot be sent between threads safely`. The compiler is also telling us the reason why: the trait `Send` is not implemented for `Rc<Mutex<i32>>`. It’s one of the traits that ensures the types we use with threads are meant for use in concurrent situations.
 
-Unfortunately, `Rc<T>` is not safe to share across threads. When `Rc<T>` manages the reference count, it addes to the count for each call to `clone`
+Unfortunately, `Rc<T>` is not safe to share across threads. When `Rc<T>` manages the reference count, it adds to the count for each call to `clone`
+
