@@ -1,6 +1,8 @@
 [workspace]
 members = [
-    "projects/minigrep", 
     "code", 
+    "projects/minigrep", 
+    "projects/hello-world", 
+    "projects/greeting", "projects/input-sum", 
 ]
 resolver = "2"
