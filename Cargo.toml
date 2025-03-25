@@ -3,6 +3,8 @@ members = [
     "code", 
     "projects/minigrep", 
     "projects/hello-world", 
-    "projects/greeting", "projects/input-sum", 
+    "projects/greeting", 
+    "projects/input-sum", 
+    "projects/input-cal", 
 ]
 resolver = "2"
