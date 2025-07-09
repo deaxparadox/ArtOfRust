@@ -5,6 +5,6 @@ members = [
     "projects/hello-world", 
     "projects/greeting", 
     "projects/input-sum", 
-    "projects/input-cal", 
+    "projects/input-cal",  "dsa/bubble_sort",
 ]
 resolver = "2"
