@@ -11,13 +11,13 @@ fn generic_sort<T: Ord>(arr: &mut [T]) {
 }
 
 fn main() {
-    let mut numbers = vec![3, 5, 1, 4, 2];
+    let mut numbers: Vec<i32> = vec![3, 5, 1, 4, 2];
     generic_sort(&mut numbers);
     print!("{:?}", numbers);
 
     println!("");
 
-    let mut words = vec!["hello", "how", "azmuth"];
+    let mut words: Vec<&'static str> = vec!["hello", "how", "azmuth"];
     generic_sort(&mut words);
     print!("{:?}", words);
 }
