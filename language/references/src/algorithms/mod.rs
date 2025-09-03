@@ -1,5 +1,6 @@
 pub mod binary_search;
 pub mod bubble_sort;
+pub mod head_sort;
 pub mod insertion_sort;
 pub mod merge_sort_parallel;
 pub mod quick_sort;

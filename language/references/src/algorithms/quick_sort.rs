@@ -35,3 +35,41 @@ pub mod quick_sort_high {
         i
     }   
 }
+
+
+pub mod quick_sort {
+    fn quick_sort<T: Ord + Clone>(arr: &mut [T], low: usize, high: usize) {
+        if low < high {
+            let pivot_index = partition(arr, low, high);
+            if pivot_index > 0 {
+                // Avoid overflow in case of very small slices
+                quick_sort(arr, low, pivot_index.saturating_sub(1));
+            }
+            quick_sort(arr, pivot_index + 1, high);
+        }
+    }
+
+    fn partition<T: Ord + Clone>(arr: &mut [T], low: usize, high: usize) -> usize {
+        let pivot = arr[high].clone();
+        let mut i = low as isize - 1;
+
+        let mut value: T;
+        for j in low..high {
+            value = arr[j].clone();
+            if value <= pivot {
+                i += 1;
+                arr.swap(i as usize, j);
+            }
+        }
+
+        arr.swap((i+1) as usize, high);
+        (i + 1) as usize
+    }
+
+    pub fn main() {
+        let mut data = [5, 3, 8, 6, 2, 7, 1, 4];
+        let high = data.len();
+        quick_sort(&mut data, 0,  high- 1);
+        print!("{:?}", data);
+    }
+}

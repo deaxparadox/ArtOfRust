@@ -53,7 +53,7 @@ fn higher_order_function() {
 
 fn main() -> Result<(), Error>{
     
-    algorithms::bubble_sort::buble_sort_1::main();
+    algorithms::quick_sort::quick_sort::main();
 
 
     Ok(())
